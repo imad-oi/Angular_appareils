@@ -1,0 +1,16 @@
+<a class="btn btn-primary btn-sm m-4 " routerLink="/new-user" role="button"> add user </a>
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let user of users">
+    
+    <h2> {{ user.firstName}}  {{ user.lastName}} </h2>
+    <p> {{user.email}} </p>
+    <p>  {{user.drinkPreferences}} </p>
+    <p *ngIf="user.hobbies && user.hobbies.length > 0">
+        cette personne a des hobbies : 
+        <span *ngFor="let hobbie of user.hobbies">
+            {{ hobbie}} , 
+        </span>    
+    </p>
+    <span class="badge bg-primary rounded-pill"> {{ user.age}}  </span>
+  </li>
+</ul>

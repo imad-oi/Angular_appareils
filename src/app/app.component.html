@@ -1,0 +1,26 @@
+     <nav class="navbar navbar-expand-sm navbar-light bg-light">
+         <div class="container-fluid">
+             <!-- <a class="navbar-brand" routerLink="/">Logo</a> -->
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
+                 aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarID">
+                 <ul class="navbar-nav">
+                    <li routerLinkActive="active"><a class="nav-link active " aria-current="page" routerLink="auth/">Authentification</a></li>
+                    <li routerLinkActive="active"> <a class="nav-link active " aria-current="page" routerLink="appareils/">appareils</a></li>
+                    <li routerLinkActive="active"> <a class="nav-link active " aria-current="page" routerLink="edit/">Nouvel appareil</a></li>
+                    <li routerLinkActive="active"> <a class="nav-link active " aria-current="page" routerLink="users/">Utilisateurs</a></li>
+                 </ul>
+                </div>    
+                <div class="navbar-right">
+                 <p>vous etes connecter depuis {{ secondes }} secondes !!</p>
+                </div>
+         </div>
+     </nav>
+<div class="container">
+  <div class="row"> 
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

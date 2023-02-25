@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm" >   <!-- #f: permet à angular de faire une reference à un element du DOM d'apres le DOM  --> 
+            <div class="form-group" >
+                <label for="name"> nom de l'appareil</label>
+                <!-- pour que angular puisse analyse input : ajouter attribut "name" , et 'ngModel': pour enregister ce control de formulaire aupres de anuglar  -->
+                <input type="text" id="name" class="form-control" name="name" ngModel  required > 
+            </div>
+            <div class="form-group" >
+                <label for="status">Etat de l'appareil </label>
+                <select id="status" class="form-control" name="status" [ngModel]="defaultOnOff" >
+                    <option value="allume">allume</option>
+                    <option value="eteint">eteint</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="f.invalid"> Enregistrer</button>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- 
+     la directive "ngForm" est une fonctionnalité pratique pour travailler avec des formulaires HTML
+dans Angular, en permettant de simplifier l'accès aux valeurs saisies et aux contrôles de validation 
+du formulaire. 
+    
+    -->
